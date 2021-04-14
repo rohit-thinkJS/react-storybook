@@ -46,3 +46,21 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+export const RectButton: React.FC<ButtonProps> = ({
+  primary = false,
+  size = 'medium',
+  backgroundColor,
+  label,
+  ...props
+}) => {
+  return (
+    <button
+      type="button"
+      style={{ backgroundColor }}
+      {...props}
+    >
+      {label}
+    </button>
+  );
+};
