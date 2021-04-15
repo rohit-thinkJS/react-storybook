@@ -1,5 +1,7 @@
 import React from 'react';
 import './button.css';
+import 'antd/dist/antd.css';
+import {Button} from 'antd'
 
 export interface ButtonProps {
   /**
@@ -27,7 +29,7 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({
+export const ButtonComp: React.FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
   backgroundColor,
@@ -55,12 +57,12 @@ export const RectButton: React.FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <button
-      type="button"
+    <Button
+      type="primary"
       style={{ backgroundColor }}
       {...props}
     >
       {label}
-    </button>
+    </Button>
   );
 };

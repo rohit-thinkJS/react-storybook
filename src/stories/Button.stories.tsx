@@ -1,17 +1,17 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Button, ButtonProps, RectButton } from './Button';
+import { ButtonComp, ButtonProps, RectButton } from './Button';
 
 export default {
   title: 'Example/Button',
-  component: Button,
+  component: ButtonComp,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <ButtonComp {...args} />;
 
 const Template2: Story<ButtonProps> = (args) => <RectButton {...args} />;
 
@@ -38,8 +38,8 @@ Small.args = {
   label: 'Button',
 };
 
-export const Blah = Template2.bind({});
-Blah.args = {
+export const AddTask = Template2.bind({});
+AddTask.args = {
   size: 'small',
-  label: 'Blah',
+  label: 'Add Task',
 };
