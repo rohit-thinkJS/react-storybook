@@ -12,6 +12,7 @@ export interface ButtonProps {
    * What background color to use
    */
   backgroundColor?: string;
+  color?: string,
   /**
    * How large should the button be?
    */
@@ -33,6 +34,7 @@ export const ButtonComp: React.FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
   backgroundColor,
+  color,
   label,
   ...props
 }) => {
@@ -41,7 +43,7 @@ export const ButtonComp: React.FC<ButtonProps> = ({
     <button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      style={{ backgroundColor, color }}
       {...props}
     >
       {label}
