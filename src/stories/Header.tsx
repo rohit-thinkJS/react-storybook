@@ -37,7 +37,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogin, onLogout, onCreat
           <ButtonComp size="small" onClick={onLogout} label="Log out" />
         ) : (
           <>
-            <ButtonComp size="small" onClick={onLogin} label="Log in" />
+            <ButtonComp size="small" onClick={onLogin} label="Sign in" />
             <ButtonComp primary size="small" onClick={onCreateAccount} label="Sign up" />
           </>
         )}
